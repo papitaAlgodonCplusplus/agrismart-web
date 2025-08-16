@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
-import { f } from "../../../../node_modules/@angular/material/icon-module.d-COXCrhrh";
-import { MatNavList } from "@angular/material/list";
-import { MatDivider } from "../../../../node_modules/@angular/material/divider/index";
+
+import { Component, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [f, MatNavList, MatDivider],
+  standalone: true,
+  imports: [CommonModule, RouterModule, MatListModule, MatIconModule, MatDividerModule],
   templateUrl: './sidebar.component.html',
-  styleUrl: './sidebar.component.scss'
+  styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+  @Output() menuItemSelected = new EventEmitter<void>();
 
+  onMenuItemClick() {
+    this.menuItemSelected.emit();
+  }
 }

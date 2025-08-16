@@ -1,18 +1,31 @@
+
+// Fix for src/app/features/dashboard/dashboard/dashboard.component.ts
 import { Component, OnInit, Inject } from '@angular/core';
 import { MockDataService } from '../../../core/services/mock-data.service';
 import { Sensor, Alert, KPI } from '../../../core/models/agrismart.models';
 import { KpiCardComponent } from "../../../shared/components/kpi-card/kpi-card.component";
-import { MatCardContent } from "@angular/material/card";
 import { SensorStatusComponent } from "../../../shared/components/sensor-status/sensor-status.component";
-import { MatCardHeader, MatCardTitle, MatCardSubtitle, MatCard } from "../../../../../node_modules/@angular/material/card/index";
 import { AlertListComponent } from "../../../shared/components/alert-list/alert-list.component";
-import { DatePipe } from '@angular/common';
+import { MatCard, MatCardContent, MatCardHeader, MatCardTitle, MatCardSubtitle } from '@angular/material/card';
+import { DatePipe, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
-  imports: [KpiCardComponent, MatCardContent, SensorStatusComponent, MatCardHeader, MatCardTitle, MatCardSubtitle, MatCard, AlertListComponent, DatePipe]
+  standalone: true,
+  imports: [
+    KpiCardComponent, 
+    SensorStatusComponent, 
+    AlertListComponent,
+    MatCard, 
+    MatCardContent, 
+    MatCardHeader, 
+    MatCardTitle, 
+    MatCardSubtitle,
+    DatePipe,
+    NgFor
+  ]
 })
 export class DashboardComponent implements OnInit {
   sensors: Sensor[] = [];

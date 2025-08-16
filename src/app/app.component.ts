@@ -1,11 +1,14 @@
+
+// Fix for src/app/app.component.ts
 import { Component } from '@angular/core';
-import { DashboardRoutingModule } from "./features/dashboard/dashboard-routing.module";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  imports: [DashboardRoutingModule]
+  standalone: true,
+  imports: [RouterOutlet]
 })
 export class AppComponent {
   title = 'AgriSmart Web';

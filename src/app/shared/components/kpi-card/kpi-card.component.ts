@@ -1,14 +1,16 @@
+
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { KPI } from '../../../core/models/agrismart.models';
-import { f } from "../../../../../node_modules/@angular/material/icon-module.d-COXCrhrh";
-import { MatCard } from "@angular/material/card";
-import { MatCardContent } from "../../../../../node_modules/@angular/material/card/index";
 
 @Component({
   selector: 'app-kpi-card',
+  standalone: true,
+  imports: [CommonModule, MatCardModule, MatIconModule],
   templateUrl: './kpi-card.component.html',
-  styleUrls: ['./kpi-card.component.scss'],
-  imports: [f, MatCard, MatCardContent]
+  styleUrls: ['./kpi-card.component.scss']
 })
 export class KpiCardComponent {
   @Input() kpi!: KPI;

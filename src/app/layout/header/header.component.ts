@@ -1,14 +1,18 @@
+
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
-import { MockDataService } from '../../core/services/mock-data.service';
-import { MatToolbar } from "@angular/material/toolbar";
+import { CommonModule } from '@angular/common';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
-import { f } from "../../../../node_modules/@angular/material/icon-module.d-COXCrhrh";
+import { MockDataService } from '../../core/services/mock-data.service';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
+  imports: [CommonModule, MatToolbarModule, MatButtonModule, MatIconModule, MatBadgeModule],
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  imports: [MatToolbar, MatBadgeModule, f]
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
   @Output() menuToggle = new EventEmitter<void>();

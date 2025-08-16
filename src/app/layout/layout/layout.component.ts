@@ -1,16 +1,24 @@
+
+// Fix for src/app/layout/layout/layout.component.ts
 import { Component } from '@angular/core';
-import { MatSidenavContainer } from "@angular/material/sidenav";
-import { MatSidenav, MatSidenavContent } from "../../../../node_modules/@angular/material/sidenav/index";
-import { HeaderComponent } from "../header/header.component";
-import { SidebarComponent } from "../sidebar/sidebar.component";
-import { AppRoutingModule } from "../../app-routing.module";
+import { MatSidenav, MatSidenavContainer, MatSidenavContent } from '@angular/material/sidenav';
+import { HeaderComponent } from '../header/header.component';
+import { SidebarComponent } from '../sidebar/sidebar.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-layout',
-  imports: [MatSidenavContainer, MatSidenav, HeaderComponent, MatSidenavContent, SidebarComponent, AppRoutingModule],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss'
+  styleUrls: ['./layout.component.scss'],
+  standalone: true,
+  imports: [
+    MatSidenavContainer, 
+    MatSidenav, 
+    MatSidenavContent,
+    HeaderComponent, 
+    SidebarComponent, 
+    RouterOutlet
+  ]
 })
 export class LayoutComponent {
-
 }

@@ -1,12 +1,15 @@
+
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 import { Sensor } from '../../../core/models/agrismart.models';
-import { f } from "../../../../../node_modules/@angular/material/icon-module.d-COXCrhrh";
 
 @Component({
   selector: 'app-sensor-status',
+  standalone: true,
+  imports: [CommonModule, MatIconModule],
   templateUrl: './sensor-status.component.html',
-  styleUrls: ['./sensor-status.component.scss'],
-  imports: [f]
+  styleUrls: ['./sensor-status.component.scss']
 })
 export class SensorStatusComponent {
   @Input() sensors: Sensor[] = [];

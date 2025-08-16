@@ -1,11 +1,13 @@
+
+// src/app/features/monitoring/charts/charts.component.ts
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-charts',
-  imports: [],
   templateUrl: './charts.component.html',
-  styleUrl: './charts.component.scss'
+  styleUrls: ['./charts.component.scss'],
+  standalone: true,
+  imports: []
 })
 export class ChartsComponent {
-
 }

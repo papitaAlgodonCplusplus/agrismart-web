@@ -1,11 +1,13 @@
+
+// src/app/features/irrigation/irrigation-control/irrigation-control.component.ts
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-irrigation-control',
-  imports: [],
   templateUrl: './irrigation-control.component.html',
-  styleUrl: './irrigation-control.component.scss'
+  styleUrls: ['./irrigation-control.component.scss'],
+  standalone: true,
+  imports: []
 })
 export class IrrigationControlComponent {
-
 }

@@ -1,13 +1,16 @@
+
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 import { Alert } from '../../../core/models/agrismart.models';
-import { f } from "../../../../../node_modules/@angular/material/icon-module.d-COXCrhrh";
-import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-alert-list',
+  standalone: true,
+  imports: [CommonModule, MatIconModule, MatButtonModule],
   templateUrl: './alert-list.component.html',
-  styleUrls: ['./alert-list.component.scss'],
-  imports: [f, DatePipe]
+  styleUrls: ['./alert-list.component.scss']
 })
 export class AlertListComponent {
   @Input() alerts: Alert[] = [];
