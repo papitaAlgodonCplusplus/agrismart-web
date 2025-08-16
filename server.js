@@ -9,6 +9,7 @@ function findBuildDir() {
   console.log('Current working directory:', process.cwd());
   
   const possiblePaths = [
+    path.join(__dirname, 'dist/agrismart-web/browser'),  // New Angular builder output
     path.join(__dirname, 'dist/agrismart-web'),
     path.join(__dirname, 'dist'),
     path.join(__dirname, 'build'),
