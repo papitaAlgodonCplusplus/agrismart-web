@@ -1,0 +1,25 @@
+<div class="alert-list">
+  <div class="alert-item" *ngFor="let alert of alerts" [class]="'alert-' + alert.type">
+    <div class="alert-content">
+      <div class="alert-header">
+        <mat-icon class="alert-icon">{{getAlertIcon(alert.type)}}</mat-icon>
+        <span class="alert-title">{{alert.title}}</span>
+        <span class="alert-time">{{alert.timestamp | date:'HH:mm'}}</span>
+      </div>
+      
+      <div class="alert-message">{{alert.message}}</div>
+      
+      <div class="alert-actions" *ngIf="!alert.isRead">
+        <button mat-button (click)="markAsRead(alert)">
+          <mat-icon>done</mat-icon>
+          Marcar leída
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="no-alerts" *ngIf="alerts.length === 0">
+    <mat-icon>notifications_none</mat-icon>
+    <p>No hay alertas recientes</p>
+  </div>
+</div>

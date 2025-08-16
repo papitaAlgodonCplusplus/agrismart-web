@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { DashboardRoutingModule } from "./features/dashboard/dashboard-routing.module";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  imports: [DashboardRoutingModule]
 })
 export class AppComponent {
-  title = 'agrismart-web';
+  title = 'AgriSmart Web';
 }

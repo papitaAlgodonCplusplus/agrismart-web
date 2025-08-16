@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="onMenuToggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  
+  <img src="assets/images/agrismart-logo.png" alt="AgriSmart" class="logo">
+  <span class="app-title">AgriSmart.tech</span>
+  
+  <span class="spacer"></span>
+  
+  <!-- Notifications -->
+  <button mat-icon-button [matBadge]="unreadAlerts" matBadgeColor="warn">
+    <mat-icon>notifications</mat-icon>
+  </button>
+  
+  <!-- User Menu -->
+  <button mat-icon-button>
+    <mat-icon>account_circle</mat-icon>
+  </button>
+</mat-toolbar>

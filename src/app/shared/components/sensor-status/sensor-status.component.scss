@@ -1,0 +1,69 @@
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  
+  .sensor-item {
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    &.status-normal { border-left-color: #4caf50; }
+    &.status-warning { border-left-color: #ff9800; }
+    &.status-critical { border-left-color: #f44336; }
+    
+    .sensor-info {
+      margin-bottom: 12px;
+      
+      .sensor-name {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+      }
+      
+      .sensor-value {
+        font-size: 1.5rem;
+        
+        .value {
+          font-weight: 700;
+          color: #1976d2;
+        }
+        
+        .unit {
+          font-size: 1rem;
+          color: #666;
+          margin-left: 4px;
+        }
+      }
+      
+      .sensor-range {
+        font-size: 0.875rem;
+        color: #666;
+        margin-top: 4px;
+      }
+    }
+    
+    .sensor-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      
+      .status-icon-normal { color: #4caf50; }
+      .status-icon-warning { color: #ff9800; }
+      .status-icon-critical { color: #f44336; }
+      
+      .status-text {
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sensor-grid {
+    grid-template-columns: 1fr;
+  }
+}

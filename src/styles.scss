@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importar tema precompilado de Angular Material */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Estilos globales */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.page-header {
+  margin-bottom: 24px;
+  
+  h1 {
+    margin: 0 0 8px 0;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .subtitle {
+    margin: 0;
+    color: #666;
+    font-size: 1rem;
+  }
+}
+
+.chart-placeholder {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  color: #999;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+
+.logo {
+  height: 32px;
+  margin-right: 12px;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.sidebar-header {
+  padding: 20px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  
+  h3 {
+    margin: 0 0 4px 0;
+    color: #1976d2;
+    font-weight: 600;
+  }
+  
+  .subtitle {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #666;
+  }
+}
+
+.mat-mdc-list-item.active {
+  background-color: rgba(25, 118, 210, 0.1);
+  color: #1976d2;
+}

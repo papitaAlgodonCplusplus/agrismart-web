@@ -1,0 +1,21 @@
+<div class="sensor-grid">
+  <div class="sensor-item" *ngFor="let sensor of sensors" [class]="'status-' + sensor.status">
+    <div class="sensor-info">
+      <div class="sensor-name">{{sensor.name}}</div>
+      <div class="sensor-value">
+        <span class="value">{{sensor.currentValue}}</span>
+        <span class="unit">{{sensor.unit}}</span>
+      </div>
+      <div class="sensor-range">
+        Rango: {{sensor.minValue}} - {{sensor.maxValue}} {{sensor.unit}}
+      </div>
+    </div>
+    
+    <div class="sensor-status">
+      <mat-icon [class]="'status-icon-' + sensor.status">
+        {{getStatusIcon(sensor.status)}}
+      </mat-icon>
+      <span class="status-text">{{getStatusText(sensor.status)}}</span>
+    </div>
+  </div>
+</div>

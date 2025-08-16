@@ -1,0 +1,17 @@
+<mat-card class="kpi-card">
+  <mat-card-content>
+    <div class="kpi-header">
+      <span class="kpi-name">{{kpi.name}}</span>
+      <mat-icon [class]="getTrendClass()">{{getTrendIcon()}}</mat-icon>
+    </div>
+    
+    <div class="kpi-value">
+      <span class="value">{{kpi.value}}</span>
+      <span class="unit">{{kpi.unit}}</span>
+    </div>
+    
+    <div class="kpi-change" [class]="getChangeClass()">
+      <span>{{getChangeText()}} {{kpi.period}}</span>
+    </div>
+  </mat-card-content>
+</mat-card>
